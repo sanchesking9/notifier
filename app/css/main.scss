@@ -1,6 +1,15 @@
-.main {
-    display: block;
-    height: 200px;
+@import "./map";
+@import '../../node_modules/reset-css/_reset.scss';
+
+html {
+    height: 100%;
 }
 
-@import "./map";
+body {
+    height: 100%;
+}
+
+.main {
+    display: block;
+    height: 100%;
+}

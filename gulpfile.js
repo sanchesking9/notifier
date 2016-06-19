@@ -39,7 +39,7 @@ gulp.task(function clean() {
 
 gulp.task('bundle', function () {
   return browserify({entries: 'app/js/app.jsx', extensions: ['.jsx'], debug: true})
-    .transform('babelify', {presets: ['es2015', 'react']})
+    .transform('babelify', {presets: ['es2015', 'react', 'stage-0']})
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('public/js'));
@@ -53,7 +53,8 @@ gulp.task(function watch() {
 
 gulp.task('webserver', function() {
   browserSync.init({
-    server: './public'
+    server: './public',
+    port: 8899
   });
 
   browserSync.watch('public/**/*.*').on('change', browserSync.reload);

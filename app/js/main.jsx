@@ -1,7 +1,8 @@
-import React from 'react';
+import { default as React, Component } from "react";
+import Map from "./Map";
 
-export default class Main extends React.Component {
+export default class Main extends Component {
   render() {
-    return <div>Hello World</div>;
+    return <Map />;
   }
 }
