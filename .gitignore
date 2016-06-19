@@ -1,2 +1,3 @@
-.idea/
-.npm_modiles
+.idea
+node_modules
+public
