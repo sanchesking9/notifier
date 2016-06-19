@@ -1,0 +1,19 @@
+{
+  "name": "notifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sanchesking9/notifier.git"
+  },
+  "author": "Sanches",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanchesking9/notifier/issues"
+  },
+  "homepage": "https://github.com/sanchesking9/notifier#readme"
+}
