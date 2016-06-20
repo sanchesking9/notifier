@@ -1,8 +1,11 @@
 @import "./map";
 @import '../../node_modules/reset-css/_reset.scss';
+@import "./actions";
 
 html {
     height: 100%;
+    font-size: 10px;
+    font-family: sans-serif;
 }
 
 body {
@@ -12,4 +15,8 @@ body {
 .main {
     display: block;
     height: 100%;
+
+    .main-wrapper {
+        height: 100%;
+    }
 }

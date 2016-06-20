@@ -1,0 +1,23 @@
+@import "mixins";
+
+.actions {
+  background: rgba(0,0,0,.5);
+  border-radius: 1rem;
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  width: 20rem;
+  z-index: 1;
+
+  button {
+    @include reset-button();
+
+    background: #607D8B;
+    border-radius: .5rem;
+    color: #fff;
+    padding: .5rem;
+    width: 100%;
+  }
+}

@@ -55,17 +55,13 @@ export default class GettingStarted extends Component {
    * Go and try click now.
    */
   handleMapClick(event) {
-    let { markers } = this.state;
-    markers = update(markers, {
-      $push: [
-        {
-          position: event.latLng,
-          defaultAnimation: 2,
-          key: Date.now(), // Add a key property for: http://fb.me/react-warning-keys
-        },
-      ],
-    });
-    this.setState({ markers });
+    let newMarker = {
+      position: event.latLng,
+      defaultAnimation: 2,
+      key: Date.now()
+    };
+
+    this.props.addPin(newMarker);
   }
 
   handleMarkerRightclick(index, event) {
@@ -94,12 +90,12 @@ export default class GettingStarted extends Component {
         }
         googleMapElement={
           <GoogleMap
-            ref={(map) => (this._googleMapComponent = map) && console.log(map.getZoom())}
+            ref={(map) => (this._googleMapComponent = map)}
             defaultZoom={10}
             defaultCenter={{ lat: 46.4545525, lng: 30.757653499999996 }}
             onClick={::this.handleMapClick}
           >
-            {this.state.markers.map((marker, index) => {
+            {this.props.pins.map((marker, index) => {
               return (
                 <Marker
                   {...marker}

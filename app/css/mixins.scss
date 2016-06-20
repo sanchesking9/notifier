@@ -1,0 +1,10 @@
+@mixin reset-button() {
+  overflow: visible; // Shrinkwrap the text in IE7-
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+}
