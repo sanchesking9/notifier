@@ -1,0 +1,92 @@
+.map {
+  height: 100%; }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.actions {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  width: 20rem;
+  z-index: 1; }
+  .actions li {
+    margin-bottom: 10px; }
+    .actions li:last-child {
+      margin-bottom: 0; }
+    .actions li button {
+      overflow: visible;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font: inherit;
+      line-height: normal;
+      cursor: pointer;
+      background: #607D8B;
+      border-radius: .5rem;
+      color: #fff;
+      padding: .5rem;
+      width: 100%; }
+
+html {
+  height: 100%;
+  font-size: 10px;
+  font-family: sans-serif; }
+
+body {
+  height: 100%; }
+
+.main {
+  display: block;
+  height: 100%; }
+  .main .main-wrapper {
+    height: 100%; }
+
+/*# sourceMappingURL=main.css.map */

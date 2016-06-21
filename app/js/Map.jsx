@@ -1,5 +1,4 @@
 import { default as React, Component } from "react";
-import { default as update } from "react-addons-update";
 
 import { default as canUseDOM } from "can-use-dom";
 import { default as _ } from "lodash";
@@ -65,18 +64,7 @@ export default class GettingStarted extends Component {
   }
 
   handleMarkerRightclick(index, event) {
-    /*
-     * All you modify is data, and the view is driven by data.
-     * This is so called data-driven-development. (And yes, it's now in
-     * web front end and even with google maps API.)
-     */
-    let { markers } = this.state;
-    markers = update(markers, {
-      $splice: [
-        [index, 1],
-      ],
-    });
-    this.setState({ markers });
+    this.props.removePin(index);
   }
 
   render() {

@@ -33,6 +33,22 @@ gulp.task(function assets() {
     .pipe(gulp.dest('public'));
 });
 
+gulp.task(function cordovaCss() {
+  return gulp.src('public/css/**')
+    .pipe(newer('cordova/www'))
+    .pipe(debug({title: 'cordovaCss'}))
+    .pipe(gulp.dest('cordova/www/css'));
+});
+
+gulp.task(function cordovaJs() {
+  return gulp.src('public/js/**')
+    .pipe(newer('cordova/www'))
+    .pipe(debug({title: 'cordovaJs'}))
+    .pipe(gulp.dest('cordova/www/js'));
+});
+
+gulp.task('cordovaBuild', gulp.series(gulp.parallel('cordovaCss', 'cordovaJs')));
+
 gulp.task(function clean() {
   return del('public')
 });

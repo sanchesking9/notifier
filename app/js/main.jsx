@@ -9,17 +9,16 @@ export default class Main extends Component {
     this.state = {
       pins: []
     };
-
   }
 
   componentDidMount() {
-    this.getPins();
+    this.getPins(true);
   }
   
-  getPins() {
+  getPins(update) {
     const pins = window.localStorage.getItem('notifier_pins');
     const data = pins ? JSON.parse(pins) : [];
-    this.setState({
+    update && this.setState({
       pins: data
     });
     return data;
@@ -39,16 +38,28 @@ export default class Main extends Component {
     } else {
       data.push(pin);
     }
-    window.localStorage.setItem('notifier_pins', JSON.stringify(data));
-    this.getPins();
+    this.savePins(data);
+    this.getPins(true);
+  }
+  
+  savePins (pins) {
+    window.localStorage.setItem('notifier_pins', JSON.stringify(pins));
+  }
+  
+  removePin(index) {
+    var pins = this.getPins();
+    pins.splice(index, 1);
+    this.savePins(pins);
+    this.getPins(true);
   }
   
   render() {
     const addPin = this.addPin.bind(this);
+    const removePin = this.removePin.bind(this);
     return (
       <div className="main-wrapper">
         <Actions addPin={addPin} />
-        <Map pins={this.state.pins} addPin={addPin}/>
+        <Map pins={this.state.pins} addPin={addPin} removePin={removePin}/>
       </div>
     );
   }
