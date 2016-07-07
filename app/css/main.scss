@@ -1,6 +1,7 @@
 @import "./map";
-@import '../../node_modules/reset-css/_reset.scss';
+@import '../../node_modules/reset-css/_reset';
 @import "./actions";
+@import "../../node_modules/cropperjs/src/scss/cropper";
 
 html {
     height: 100%;

@@ -1,6 +1,7 @@
 import { default as React, Component } from "react";
 import Map from "./Map";
 import Actions from "./Actions";
+import CropImape from "./CropImage";
 
 export default class Main extends Component {
 
@@ -60,6 +61,7 @@ export default class Main extends Component {
       <div className="main-wrapper">
         <Actions addPin={addPin} />
         <Map pins={this.state.pins} addPin={addPin} removePin={removePin}/>
+        <CropImape />
       </div>
     );
   }

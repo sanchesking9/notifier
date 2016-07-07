@@ -3,6 +3,6 @@
 ### start
 `npm i`
 
-`gulp`
+`npm start`
 
-If gulp returns error try to exec this command `export PATH=./node_modules/.bin:$PATH`
+
