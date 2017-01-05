@@ -10,6 +10,7 @@ export default class Actions extends Component {
 
   setMyPlace() {
     window.navigator.geolocation.getCurrentPosition((position) => {
+    
       this.props.addPin({
         position: {
           lat: position.coords.latitude,
